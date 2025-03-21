@@ -42,7 +42,7 @@ Delivery-Time-Prediction-JD/
 │   └── network.csv
 │
 ├── notebooks/             # Analysis scripts
-│   └── Assignment11.ipynb # Main Jupyter Notebook
+│   └── Delivery Time Prediction for JD.com.ipynb # Main Jupyter Notebook
 │
 ├── README.md              # This file
 └── requirements.txt       # Python dependencies
