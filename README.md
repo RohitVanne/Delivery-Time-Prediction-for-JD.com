@@ -31,6 +31,7 @@ The analysis leverages five JD.com CSV files:
 **Note**: Datasets are not included in this repository due to size or privacy constraints. Update file paths in the code (e.g., `C:\Assignments\BA\BAASSIGN\`) to your local data locations.
 
 ## Project Structure
+```
 Delivery-Time-Prediction-JD/
 │
 ├── data/                  # Placeholder for datasets (not included)
@@ -45,7 +46,7 @@ Delivery-Time-Prediction-JD/
 │
 ├── README.md              # This file
 └── requirements.txt       # Python dependencies
-
+```
 ## Dependencies
 Install the required Python libraries:
 pandas
@@ -58,8 +59,6 @@ Install via pip:
 ```bash
 pip install -r requirements.txt
 ```
-## Methodology
-
 ## Methodology
 
 ### 1. Data Exploration
