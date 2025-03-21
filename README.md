@@ -31,3 +31,56 @@ The analysis leverages five JD.com CSV files:
 **Note**: Datasets are not included in this repository due to size or privacy constraints. Update file paths in the code (e.g., `C:\Assignments\BA\BAASSIGN\`) to your local data locations.
 
 ## Project Structure
+Delivery-Time-Prediction-JD/
+│
+├── data/                  # Placeholder for datasets (not included)
+│   ├── order.csv
+│   ├── user.csv
+│   ├── delivery.csv
+│   ├── inventory.csv
+│   └── network.csv
+│
+├── notebooks/             # Analysis scripts
+│   └── Assignment11.ipynb # Main Jupyter Notebook
+│
+├── README.md              # This file
+└── requirements.txt       # Python dependencies
+
+## Dependencies
+Install the required Python libraries:
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+
+Install via pip:
+```bash
+pip install -r requirements.txt
+```
+## Methodology
+
+## Methodology
+
+### 1. Data Exploration
+- Loaded datasets into pandas DataFrames.
+- Checked for missing values (none found) and explored key variables like `promise`.
+
+### 2. Data Preprocessing
+- Analyzed `promise` values (e.g., `-` as a placeholder) and their distribution.
+- Sorted and examined `type` and `promise` relationships.
+
+### 3. Data Merging
+- Inner merge of Order and Delivery tables (326,862 rows).
+- Right merge to retain all delivery records (326,880 rows).
+
+### 4. Feature Engineering
+- Aggregated order data by `order_ID` (e.g., sum of `quantity`, count of `sku_ID`).
+- Merged with User data.
+- Added features: `dis_rate` (discount rate), `busy_hour` (peak hour indicator).
+
+### 5. Modeling
+- Target: `delivery_time`.
+- Features: `type_x`, `sku_ID`, `quantity`, `finalValue`, `gift_item`, `plus`, `dis_rate`, `busy_hour`.
+- Split data: 80% training, 20% testing.
+- Trained a Decision Tree Regressor and made predictions.
